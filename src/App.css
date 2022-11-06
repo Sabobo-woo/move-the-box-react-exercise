@@ -1,6 +1,10 @@
-.App {
-  text-align: center;
+.box {
+  height: 153px;
+  width: 153px;
+  background-color:yellow ;
+  color: red;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +39,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.box {
+  height: 153px;
+  width: 153px;
+  background-color:yellow ;
+  color: red;
 }

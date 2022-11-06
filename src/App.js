@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from "react";
 
 function App() {
+
+  const [move, setMove] = useState(0);
+
+
+  const moveBox = () => {
+    return setMove(move + 35)
+  }
+
+
+  console.log(move)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <button onClick={moveBox}>move the box</button>
+      {
+        move === 0 ? (
+          <div className='Box' style={{ height: '153px', width: '153px', backgroundColor: 'pink' }}></div>
+        ) : (
+          <div className='Box' style={{ 'marginTop': move, height: '153px', width: '153px', backgroundColor: 'pink' }}>{move}</div>
+        )
+      }
+    </div >
   );
 }
 
